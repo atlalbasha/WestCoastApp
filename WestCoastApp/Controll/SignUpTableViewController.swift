@@ -10,7 +10,6 @@ import CoreData
 
 class SignUpTableViewController: UITableViewController, UITextFieldDelegate {
     
-    var myUser = [User?]()
     var myCourse = [Courses?]()
     var currentUser : User?
     var userBrain = UserBrain()
@@ -18,12 +17,13 @@ class SignUpTableViewController: UITableViewController, UITextFieldDelegate {
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
     
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         print(FileManager.default.urls(for: .documentDirectory, in: .userDomainMask))
-
+        
+        // register custom cell
         tableView.register(TextFieldTableViewCell.nib(), forCellReuseIdentifier: TextFieldTableViewCell.identifier)
         
     }
@@ -33,7 +33,7 @@ class SignUpTableViewController: UITableViewController, UITextFieldDelegate {
         super.viewWillDisappear(true)
         navigationController?.isNavigationBarHidden = true
     }
-
+    
     // MARK: - Table view data source
     
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -109,8 +109,7 @@ class SignUpTableViewController: UITableViewController, UITextFieldDelegate {
                 fieldCell.textField.placeholder = "Password..."
                 fieldCell.textField.textAlignment = .center
                 fieldCell.selectionStyle = .none
-//                fieldCell.textField.isSecureTextEntry = true
-                
+                fieldCell.textField.isSecureTextEntry = true
                 fieldCell.textField.returnKeyType = .done
                 fieldCell.textField.tag = indexPath.row
             }
@@ -144,19 +143,13 @@ class SignUpTableViewController: UITableViewController, UITextFieldDelegate {
             if checkFieldEmpty() {
                 newUserSave()
                 saveToCoreData()
+                performSegue(withIdentifier: "ProfileSegue", sender: self)
             }
-
-            performSegue(withIdentifier: "ProfileSegue", sender: self)
-
         }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "ProfileSegue"{
-            
-           
-            
-           
             
             let VC = segue.destination as! ProfileTableViewController
             VC.currentUser = currentUser
@@ -186,10 +179,10 @@ class SignUpTableViewController: UITableViewController, UITextFieldDelegate {
                 userBrain.userPassword = textField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
             }
             
-       }else {
+        }else {
             
             if textField.tag == 0 {
-               
+                
                 textField.attributedPlaceholder = NSAttributedString(string: "Type Your Name...", attributes: [NSAttributedString.Key.foregroundColor : UIColor(named: "passColor") ?? .orange])
             }else if textField.tag == 1 {
                 textField.attributedPlaceholder = NSAttributedString(string: "Type Your Email...", attributes: [NSAttributedString.Key.foregroundColor : UIColor(named: "passColor") ?? .orange])
@@ -201,7 +194,7 @@ class SignUpTableViewController: UITableViewController, UITextFieldDelegate {
             
         }
         
-       
+        
         
         textField.resignFirstResponder()
     }
@@ -210,25 +203,19 @@ class SignUpTableViewController: UITableViewController, UITextFieldDelegate {
     func newUserSave()   {
         
         let newUser = User(context: context)
-//        let newCourse = Courses(context: context)
-//        let result = NSSet()
         
         newUser.user_Name = userBrain.userName
         newUser.user_Email = userBrain.userEmail
         newUser.user_Mobile = userBrain.userMobile
         newUser.user_Password = userBrain.userPassword
-//        newUser.user_Course_List = result
         
-//        newCourse.course_Name = "html"
-//        newCourse.course_Description = "des Html"
-//
-//        newCourse.course_List = newUser
+        // newCourse.course_List = newUser
+        
         currentUser = newUser
-       
-        myUser.append(newUser)
+        
     }
     
-   func checkFieldEmpty () -> Bool {
+    func checkFieldEmpty () -> Bool {
         if userBrain.userName != "" && userBrain.userEmail != "" && userBrain.userMobile != "" && userBrain.userPassword != "" {
             return true
         }else{

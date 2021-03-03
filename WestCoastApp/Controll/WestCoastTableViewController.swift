@@ -15,10 +15,11 @@ class WestCoastTableViewController: UITableViewController {
     
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(true)
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
         navigationController?.isNavigationBarHidden = true
     }
+    
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(true)
         navigationController?.isNavigationBarHidden = false
@@ -57,14 +58,7 @@ class WestCoastTableViewController: UITableViewController {
             cell.textLabel?.textColor = UIColor(named: "WestTextColor")
             cell.textLabel?.font = UIFont.boldSystemFont(ofSize: 22.0)
         }else if indexPath.section == 2 {
-            cell.textLabel?.text = """
-                WestCoast Education is an education company located on the west coast just north of Gothenburg. We have been in the education industry for almost 40 years. Our business goal is and has been to provide technical training in the IT area. We have been very successful all these years. We specialise primarily in system development training in web and mobile solutions.
-                """
-            cell.textLabel?.textAlignment = .center
-            cell.selectionStyle = .none
-            cell.textLabel?.textColor = UIColor(named: "WestTextColor")
-            cell.textLabel?.font = UIFont.boldSystemFont(ofSize: 16.0)
-            cell.textLabel?.numberOfLines = 0
+            
         }else if indexPath.section == 3 {
             cell.textLabel?.text = "Login"
             cell.textLabel?.textAlignment = .center

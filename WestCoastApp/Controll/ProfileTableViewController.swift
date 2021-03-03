@@ -34,13 +34,10 @@ class ProfileTableViewController: UITableViewController {
         super.viewDidAppear(true)
         
         courses = newUser[0].user_Course_List?.allObjects as! [Courses]
+       
         loadUser()
     }
     
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(true)
-        navigationController?.isNavigationBarHidden = false
-    }
     
     
     
@@ -103,14 +100,18 @@ class ProfileTableViewController: UITableViewController {
         tableView.deselectRow(at: indexPath, animated: true)
         if indexPath.section == 2{
             performSegue(withIdentifier: "CourseListSegue", sender: self)
+        }else if indexPath.section == 3{
+            performSegue(withIdentifier: "logoutSegue", sender: self)
         }
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "CourseListSegue"{
-            
             let VC = segue.destination as! CourseListTableViewController
             VC.currentUser = currentUser
+        
+        }else if segue.identifier == "logoutSegue" {
             
+            let VC = segue.destination as! WestCoastTableViewController
         }
     }
     
@@ -129,7 +130,9 @@ class ProfileTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         
+        context.delete(courses[indexPath.row])
         courses.remove(at: indexPath.row )
+        saveToCoreData()
         tableView.reloadData()
     }
     
@@ -138,12 +141,13 @@ class ProfileTableViewController: UITableViewController {
     
     func loadUser(){
         let request: NSFetchRequest<User> = User.fetchRequest()
-        let predicate = NSPredicate(format: "user_Name == %@ ", currentUser!.user_Name!)
+        let predicate = NSPredicate(format: "user_Name == %@ && user_Password == %@", currentUser!.user_Name!, currentUser!.user_Password!)
         
         request.predicate = predicate
         
         do{
             newUser = try context.fetch(request)
+            
         }catch{
             print("Error")
         }
@@ -151,6 +155,13 @@ class ProfileTableViewController: UITableViewController {
     }
     
     
+    func saveToCoreData() {
+        do {
+            try context.save()
+        }catch{
+            print("error with save new user \(error)")
+        }
+    }
     
     
     
