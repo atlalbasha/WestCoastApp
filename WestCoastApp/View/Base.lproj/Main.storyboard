@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="IEO-Jd-LLG">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--West Coast Table View Controller-->
+        <scene sceneID="Lz1-nc-ceV">
+            <objects>
+                <tableViewController id="zQQ-FD-km5" customClass="WestCoastTableViewController" customModule="WestCoastApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="ltc-ey-1hp">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="Wki-HT-m4V">
+                                <rect key="frame" x="20" y="55.5" width="374" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Wki-HT-m4V" id="5XU-uE-ioz">
+                                    <rect key="frame" x="0.0" y="0.0" width="374" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="zQQ-FD-km5" id="luh-1X-hgW"/>
+                            <outlet property="delegate" destination="zQQ-FD-km5" id="Lms-e7-Anh"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="qYA-QF-vMh"/>
+                    <connections>
+                        <segue destination="b6k-dY-tmf" kind="show" identifier="SignSegue" id="UL9-rn-upe"/>
+                        <segue destination="BaW-fg-wjc" kind="show" identifier="LoginSegue" id="69b-wZ-ufL"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dUP-r8-7Go" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-349.27536231884062" y="69.642857142857139"/>
+        </scene>
+        <!--Profile Table View Controller-->
+        <scene sceneID="QTX-8e-WJO">
+            <objects>
+                <tableViewController id="81q-Tx-Nbu" customClass="ProfileTableViewController" customModule="WestCoastApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="grA-kk-svW">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="Q4U-tc-ZDs">
+                                <rect key="frame" x="20" y="55.5" width="374" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Q4U-tc-ZDs" id="o8m-wB-yIx">
+                                    <rect key="frame" x="0.0" y="0.0" width="374" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="81q-Tx-Nbu" id="ewj-Fj-vjJ"/>
+                            <outlet property="delegate" destination="81q-Tx-Nbu" id="r4t-gi-W9Y"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="eaU-aM-X9y"/>
+                    <connections>
+                        <segue destination="8a0-Jf-WV8" kind="show" identifier="CourseListSegue" id="V5V-Ow-Gf1"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bpu-7A-kYT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2654" y="134"/>
+        </scene>
+        <!--Login Table View Controller-->
+        <scene sceneID="u6a-ca-a6M">
+            <objects>
+                <tableViewController id="BaW-fg-wjc" customClass="LoginTableViewController" customModule="WestCoastApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="QhN-xj-ilT">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="eJz-9z-z4X">
+                                <rect key="frame" x="20" y="55.5" width="374" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="eJz-9z-z4X" id="vGw-6h-xNn">
+                                    <rect key="frame" x="0.0" y="0.0" width="374" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="BaW-fg-wjc" id="ZMD-dk-fJr"/>
+                            <outlet property="delegate" destination="BaW-fg-wjc" id="Dbz-ym-g7H"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="hB4-MA-kdW"/>
+                    <connections>
+                        <segue destination="81q-Tx-Nbu" kind="show" identifier="ProfileSegue" id="xTP-xr-agt"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3wb-V9-fZO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1415.9420289855072" y="614.73214285714278"/>
+        </scene>
+        <!--Sign Up Table View Controller-->
+        <scene sceneID="egq-11-l5I">
+            <objects>
+                <tableViewController id="b6k-dY-tmf" customClass="SignUpTableViewController" customModule="WestCoastApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="LM1-Xe-N72">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="xXW-RT-9z6">
+                                <rect key="frame" x="20" y="55.5" width="374" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="xXW-RT-9z6" id="PKR-sv-gPN">
+                                    <rect key="frame" x="0.0" y="0.0" width="374" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="b6k-dY-tmf" id="CeL-OQ-nKe"/>
+                            <outlet property="delegate" destination="b6k-dY-tmf" id="BP3-9e-qqL"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="ocV-YA-Px7"/>
+                    <connections>
+                        <segue destination="81q-Tx-Nbu" kind="show" identifier="ProfileSegue" id="4Ag-3D-6pM"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ohk-sA-cE3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1415.9420289855072" y="-410.49107142857139"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="mPp-CL-K0q">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="IEO-Jd-LLG" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="OhX-rH-mUl">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="zQQ-FD-km5" kind="relationship" relationship="rootViewController" id="8LE-f1-Ni2"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dBv-9q-Byy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1259.4202898550725" y="69.642857142857139"/>
+        </scene>
+        <!--Course List Table View Controller-->
+        <scene sceneID="ea1-vI-zNe">
+            <objects>
+                <tableViewController id="8a0-Jf-WV8" customClass="CourseListTableViewController" customModule="WestCoastApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="gws-CO-RqY">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="8iM-WW-JWS">
+                                <rect key="frame" x="20" y="55.5" width="374" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="8iM-WW-JWS" id="i0M-a7-MeB">
+                                    <rect key="frame" x="0.0" y="0.0" width="374" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="maY-qK-wLq" kind="showDetail" identifier="ShowCourseSegue" id="bgc-8s-Skn"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="8a0-Jf-WV8" id="l9d-Br-Ue3"/>
+                            <outlet property="delegate" destination="8a0-Jf-WV8" id="Gnp-No-ale"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="vit-32-QS5"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="01g-bj-f9s" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3752" y="134"/>
+        </scene>
+        <!--Show Course Table View Controller-->
+        <scene sceneID="ZVy-En-d2t">
+            <objects>
+                <tableViewController id="maY-qK-wLq" customClass="ShowCourseTableViewController" customModule="WestCoastApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="b0b-FB-Ta5">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="Ued-hF-cxJ">
+                                <rect key="frame" x="20" y="55.5" width="374" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Ued-hF-cxJ" id="Dfp-Kj-T5c">
+                                    <rect key="frame" x="0.0" y="0.0" width="374" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="maY-qK-wLq" id="qwz-x0-612"/>
+                            <outlet property="delegate" destination="maY-qK-wLq" id="Q57-ZS-5b4"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="Rfo-tm-9fG"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0XM-C5-w5P" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4851" y="134"/>
+        </scene>
+    </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="xTP-xr-agt"/>
+    </inferredMetricsTieBreakers>
+    <color key="tintColor" red="0.91159212590000005" green="0.4555513263" blue="0.43920037150000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

@@ -9,23 +9,51 @@
 /* Begin PBXBuildFile section */
 		FA89C48C25EDA25B00E29777 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA89C48B25EDA25B00E29777 /* AppDelegate.swift */; };
 		FA89C48E25EDA25B00E29777 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA89C48D25EDA25B00E29777 /* SceneDelegate.swift */; };
-		FA89C49025EDA25B00E29777 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA89C48F25EDA25B00E29777 /* ViewController.swift */; };
 		FA89C49325EDA25B00E29777 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA89C49125EDA25B00E29777 /* Main.storyboard */; };
 		FA89C49625EDA25B00E29777 /* WestCoastApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FA89C49425EDA25B00E29777 /* WestCoastApp.xcdatamodeld */; };
 		FA89C49825EDA25F00E29777 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA89C49725EDA25F00E29777 /* Assets.xcassets */; };
 		FA89C49B25EDA25F00E29777 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA89C49925EDA25F00E29777 /* LaunchScreen.storyboard */; };
+		FA89C4B125EDA41700E29777 /* WestCoastTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA89C4B025EDA41700E29777 /* WestCoastTableViewController.swift */; };
+		FA89C4B425EDA43700E29777 /* LoginTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA89C4B325EDA43700E29777 /* LoginTableViewController.swift */; };
+		FA89C4B725EDA44700E29777 /* SignUpTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA89C4B625EDA44700E29777 /* SignUpTableViewController.swift */; };
+		FA89C4BA25EDA45500E29777 /* ProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA89C4B925EDA45500E29777 /* ProfileTableViewController.swift */; };
+		FA89C4C025EDA7C000E29777 /* TextFieldTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA89C4BE25EDA7C000E29777 /* TextFieldTableViewCell.swift */; };
+		FA89C4C125EDA7C000E29777 /* TextFieldTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA89C4BF25EDA7C000E29777 /* TextFieldTableViewCell.xib */; };
+		FA89C4C425EDADA900E29777 /* CourseListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA89C4C325EDADA900E29777 /* CourseListTableViewController.swift */; };
+		FA89C4C725EDADB800E29777 /* ShowCourseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA89C4C625EDADB800E29777 /* ShowCourseTableViewController.swift */; };
+		FA89C4CA25EDB00400E29777 /* CoursesBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA89C4C925EDB00400E29777 /* CoursesBrain.swift */; };
+		FA89C4CD25EDB17900E29777 /* CoursesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA89C4CC25EDB17900E29777 /* CoursesModel.swift */; };
+		FA89C4D325EDB69A00E29777 /* User+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA89C4CF25EDB69900E29777 /* User+CoreDataClass.swift */; };
+		FA89C4D425EDB69A00E29777 /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA89C4D025EDB69900E29777 /* User+CoreDataProperties.swift */; };
+		FA89C4D525EDB69A00E29777 /* Courses+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA89C4D125EDB69900E29777 /* Courses+CoreDataClass.swift */; };
+		FA89C4D625EDB69A00E29777 /* Courses+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA89C4D225EDB69900E29777 /* Courses+CoreDataProperties.swift */; };
+		FA89C4D925EDBB0C00E29777 /* UserBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA89C4D825EDBB0C00E29777 /* UserBrain.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		FA89C48825EDA25B00E29777 /* WestCoastApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WestCoastApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA89C48B25EDA25B00E29777 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FA89C48D25EDA25B00E29777 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		FA89C48F25EDA25B00E29777 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		FA89C49225EDA25B00E29777 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FA89C49525EDA25B00E29777 /* WestCoastApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = WestCoastApp.xcdatamodel; sourceTree = "<group>"; };
 		FA89C49725EDA25F00E29777 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FA89C49A25EDA25F00E29777 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FA89C49C25EDA25F00E29777 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FA89C4B025EDA41700E29777 /* WestCoastTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WestCoastTableViewController.swift; sourceTree = "<group>"; };
+		FA89C4B325EDA43700E29777 /* LoginTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginTableViewController.swift; sourceTree = "<group>"; };
+		FA89C4B625EDA44700E29777 /* SignUpTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpTableViewController.swift; sourceTree = "<group>"; };
+		FA89C4B925EDA45500E29777 /* ProfileTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableViewController.swift; sourceTree = "<group>"; };
+		FA89C4BE25EDA7C000E29777 /* TextFieldTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldTableViewCell.swift; sourceTree = "<group>"; };
+		FA89C4BF25EDA7C000E29777 /* TextFieldTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TextFieldTableViewCell.xib; sourceTree = "<group>"; };
+		FA89C4C325EDADA900E29777 /* CourseListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseListTableViewController.swift; sourceTree = "<group>"; };
+		FA89C4C625EDADB800E29777 /* ShowCourseTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowCourseTableViewController.swift; sourceTree = "<group>"; };
+		FA89C4C925EDB00400E29777 /* CoursesBrain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CoursesBrain.swift; path = ../../../WestCoast/WestCoast/CoreDataModel/CoursesBrain.swift; sourceTree = "<group>"; };
+		FA89C4CC25EDB17900E29777 /* CoursesModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CoursesModel.swift; path = ../../../WestCoast/WestCoast/CoreDataModel/CoursesModel.swift; sourceTree = "<group>"; };
+		FA89C4CF25EDB69900E29777 /* User+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataClass.swift"; sourceTree = "<group>"; };
+		FA89C4D025EDB69900E29777 /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		FA89C4D125EDB69900E29777 /* Courses+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Courses+CoreDataClass.swift"; sourceTree = "<group>"; };
+		FA89C4D225EDB69900E29777 /* Courses+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Courses+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		FA89C4D825EDBB0C00E29777 /* UserBrain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserBrain.swift; path = ../../../WestCoast/WestCoast/CoreDataModel/UserBrain.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,16 +86,78 @@
 		FA89C48A25EDA25B00E29777 /* WestCoastApp */ = {
 			isa = PBXGroup;
 			children = (
-				FA89C48B25EDA25B00E29777 /* AppDelegate.swift */,
-				FA89C48D25EDA25B00E29777 /* SceneDelegate.swift */,
-				FA89C48F25EDA25B00E29777 /* ViewController.swift */,
-				FA89C49125EDA25B00E29777 /* Main.storyboard */,
-				FA89C49725EDA25F00E29777 /* Assets.xcassets */,
-				FA89C49925EDA25F00E29777 /* LaunchScreen.storyboard */,
+				FA89C4BC25EDA74500E29777 /* CustomCell */,
+				FA89C4A325EDA28800E29777 /* AppDelegate */,
+				FA89C4A725EDA2B200E29777 /* Model */,
+				FA89C4A825EDA2BA00E29777 /* Controll */,
+				FA89C4A525EDA29900E29777 /* View */,
+				FA89C4A625EDA2A700E29777 /* Support */,
 				FA89C49C25EDA25F00E29777 /* Info.plist */,
-				FA89C49425EDA25B00E29777 /* WestCoastApp.xcdatamodeld */,
 			);
 			path = WestCoastApp;
+			sourceTree = "<group>";
+		};
+		FA89C4A325EDA28800E29777 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				FA89C48B25EDA25B00E29777 /* AppDelegate.swift */,
+				FA89C48D25EDA25B00E29777 /* SceneDelegate.swift */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		FA89C4A525EDA29900E29777 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FA89C49125EDA25B00E29777 /* Main.storyboard */,
+				FA89C49925EDA25F00E29777 /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FA89C4A625EDA2A700E29777 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				FA89C49725EDA25F00E29777 /* Assets.xcassets */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
+		FA89C4A725EDA2B200E29777 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FA89C4CF25EDB69900E29777 /* User+CoreDataClass.swift */,
+				FA89C4D025EDB69900E29777 /* User+CoreDataProperties.swift */,
+				FA89C4D125EDB69900E29777 /* Courses+CoreDataClass.swift */,
+				FA89C4D225EDB69900E29777 /* Courses+CoreDataProperties.swift */,
+				FA89C49425EDA25B00E29777 /* WestCoastApp.xcdatamodeld */,
+				FA89C4C925EDB00400E29777 /* CoursesBrain.swift */,
+				FA89C4CC25EDB17900E29777 /* CoursesModel.swift */,
+				FA89C4D825EDBB0C00E29777 /* UserBrain.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		FA89C4A825EDA2BA00E29777 /* Controll */ = {
+			isa = PBXGroup;
+			children = (
+				FA89C4B025EDA41700E29777 /* WestCoastTableViewController.swift */,
+				FA89C4B325EDA43700E29777 /* LoginTableViewController.swift */,
+				FA89C4B625EDA44700E29777 /* SignUpTableViewController.swift */,
+				FA89C4B925EDA45500E29777 /* ProfileTableViewController.swift */,
+				FA89C4C325EDADA900E29777 /* CourseListTableViewController.swift */,
+				FA89C4C625EDADB800E29777 /* ShowCourseTableViewController.swift */,
+			);
+			path = Controll;
+			sourceTree = "<group>";
+		};
+		FA89C4BC25EDA74500E29777 /* CustomCell */ = {
+			isa = PBXGroup;
+			children = (
+				FA89C4BE25EDA7C000E29777 /* TextFieldTableViewCell.swift */,
+				FA89C4BF25EDA7C000E29777 /* TextFieldTableViewCell.xib */,
+			);
+			path = CustomCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -130,6 +220,7 @@
 				FA89C49B25EDA25F00E29777 /* LaunchScreen.storyboard in Resources */,
 				FA89C49825EDA25F00E29777 /* Assets.xcassets in Resources */,
 				FA89C49325EDA25B00E29777 /* Main.storyboard in Resources */,
+				FA89C4C125EDA7C000E29777 /* TextFieldTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -140,10 +231,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FA89C49025EDA25B00E29777 /* ViewController.swift in Sources */,
+				FA89C4BA25EDA45500E29777 /* ProfileTableViewController.swift in Sources */,
+				FA89C4B425EDA43700E29777 /* LoginTableViewController.swift in Sources */,
+				FA89C4B725EDA44700E29777 /* SignUpTableViewController.swift in Sources */,
+				FA89C4D525EDB69A00E29777 /* Courses+CoreDataClass.swift in Sources */,
+				FA89C4D625EDB69A00E29777 /* Courses+CoreDataProperties.swift in Sources */,
+				FA89C4D325EDB69A00E29777 /* User+CoreDataClass.swift in Sources */,
+				FA89C4C025EDA7C000E29777 /* TextFieldTableViewCell.swift in Sources */,
 				FA89C48C25EDA25B00E29777 /* AppDelegate.swift in Sources */,
+				FA89C4B125EDA41700E29777 /* WestCoastTableViewController.swift in Sources */,
 				FA89C48E25EDA25B00E29777 /* SceneDelegate.swift in Sources */,
 				FA89C49625EDA25B00E29777 /* WestCoastApp.xcdatamodeld in Sources */,
+				FA89C4CA25EDB00400E29777 /* CoursesBrain.swift in Sources */,
+				FA89C4D425EDB69A00E29777 /* User+CoreDataProperties.swift in Sources */,
+				FA89C4D925EDBB0C00E29777 /* UserBrain.swift in Sources */,
+				FA89C4C425EDADA900E29777 /* CourseListTableViewController.swift in Sources */,
+				FA89C4CD25EDB17900E29777 /* CoursesModel.swift in Sources */,
+				FA89C4C725EDADB800E29777 /* ShowCourseTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
