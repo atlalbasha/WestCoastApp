@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FA3419FB25F58C7000135BCE /* Courses+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3419F725F58C7000135BCE /* Courses+CoreDataClass.swift */; };
+		FA3419FC25F58C7000135BCE /* Courses+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3419F825F58C7000135BCE /* Courses+CoreDataProperties.swift */; };
+		FA3419FD25F58C7000135BCE /* User+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3419F925F58C7000135BCE /* User+CoreDataClass.swift */; };
+		FA3419FE25F58C7000135BCE /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3419FA25F58C7000135BCE /* User+CoreDataProperties.swift */; };
 		FA89C48C25EDA25B00E29777 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA89C48B25EDA25B00E29777 /* AppDelegate.swift */; };
 		FA89C48E25EDA25B00E29777 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA89C48D25EDA25B00E29777 /* SceneDelegate.swift */; };
 		FA89C49325EDA25B00E29777 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA89C49125EDA25B00E29777 /* Main.storyboard */; };
@@ -21,16 +25,16 @@
 		FA89C4C725EDADB800E29777 /* ShowCourseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA89C4C625EDADB800E29777 /* ShowCourseTableViewController.swift */; };
 		FA89C4CA25EDB00400E29777 /* CoursesBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA89C4C925EDB00400E29777 /* CoursesBrain.swift */; };
 		FA89C4CD25EDB17900E29777 /* CoursesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA89C4CC25EDB17900E29777 /* CoursesModel.swift */; };
-		FA89C4D325EDB69A00E29777 /* User+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA89C4CF25EDB69900E29777 /* User+CoreDataClass.swift */; };
-		FA89C4D425EDB69A00E29777 /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA89C4D025EDB69900E29777 /* User+CoreDataProperties.swift */; };
-		FA89C4D525EDB69A00E29777 /* Courses+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA89C4D125EDB69900E29777 /* Courses+CoreDataClass.swift */; };
-		FA89C4D625EDB69A00E29777 /* Courses+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA89C4D225EDB69900E29777 /* Courses+CoreDataProperties.swift */; };
 		FA89C4D925EDBB0C00E29777 /* UserBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA89C4D825EDBB0C00E29777 /* UserBrain.swift */; };
 		FAB3553B25EFE92C00A93528 /* TextFieldTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAB3553925EFE92C00A93528 /* TextFieldTableViewCell.xib */; };
 		FAB3553C25EFE92C00A93528 /* TextFieldTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB3553A25EFE92C00A93528 /* TextFieldTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FA3419F725F58C7000135BCE /* Courses+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Courses+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
+		FA3419F825F58C7000135BCE /* Courses+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Courses+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
+		FA3419F925F58C7000135BCE /* User+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
+		FA3419FA25F58C7000135BCE /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
 		FA89C48825EDA25B00E29777 /* WestCoastApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WestCoastApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA89C48B25EDA25B00E29777 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FA89C48D25EDA25B00E29777 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -47,10 +51,6 @@
 		FA89C4C625EDADB800E29777 /* ShowCourseTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowCourseTableViewController.swift; sourceTree = "<group>"; };
 		FA89C4C925EDB00400E29777 /* CoursesBrain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CoursesBrain.swift; path = ../../../WestCoast/WestCoast/CoreDataModel/CoursesBrain.swift; sourceTree = "<group>"; };
 		FA89C4CC25EDB17900E29777 /* CoursesModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CoursesModel.swift; path = ../../../WestCoast/WestCoast/CoreDataModel/CoursesModel.swift; sourceTree = "<group>"; };
-		FA89C4CF25EDB69900E29777 /* User+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataClass.swift"; sourceTree = "<group>"; };
-		FA89C4D025EDB69900E29777 /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		FA89C4D125EDB69900E29777 /* Courses+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Courses+CoreDataClass.swift"; sourceTree = "<group>"; };
-		FA89C4D225EDB69900E29777 /* Courses+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Courses+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		FA89C4D825EDBB0C00E29777 /* UserBrain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserBrain.swift; path = ../../../WestCoast/WestCoast/CoreDataModel/UserBrain.swift; sourceTree = "<group>"; };
 		FAB3553925EFE92C00A93528 /* TextFieldTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TextFieldTableViewCell.xib; sourceTree = "<group>"; };
 		FAB3553A25EFE92C00A93528 /* TextFieldTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldTableViewCell.swift; sourceTree = "<group>"; };
@@ -126,10 +126,10 @@
 		FA89C4A725EDA2B200E29777 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				FA89C4CF25EDB69900E29777 /* User+CoreDataClass.swift */,
-				FA89C4D025EDB69900E29777 /* User+CoreDataProperties.swift */,
-				FA89C4D125EDB69900E29777 /* Courses+CoreDataClass.swift */,
-				FA89C4D225EDB69900E29777 /* Courses+CoreDataProperties.swift */,
+				FA3419F725F58C7000135BCE /* Courses+CoreDataClass.swift */,
+				FA3419F825F58C7000135BCE /* Courses+CoreDataProperties.swift */,
+				FA3419F925F58C7000135BCE /* User+CoreDataClass.swift */,
+				FA3419FA25F58C7000135BCE /* User+CoreDataProperties.swift */,
 				FA89C49425EDA25B00E29777 /* WestCoastApp.xcdatamodeld */,
 				FA89C4C925EDB00400E29777 /* CoursesBrain.swift */,
 				FA89C4CC25EDB17900E29777 /* CoursesModel.swift */,
@@ -233,18 +233,18 @@
 			files = (
 				FA89C4BA25EDA45500E29777 /* ProfileTableViewController.swift in Sources */,
 				FA89C4B425EDA43700E29777 /* LoginTableViewController.swift in Sources */,
+				FA3419FC25F58C7000135BCE /* Courses+CoreDataProperties.swift in Sources */,
 				FA89C4B725EDA44700E29777 /* SignUpTableViewController.swift in Sources */,
-				FA89C4D525EDB69A00E29777 /* Courses+CoreDataClass.swift in Sources */,
-				FA89C4D625EDB69A00E29777 /* Courses+CoreDataProperties.swift in Sources */,
-				FA89C4D325EDB69A00E29777 /* User+CoreDataClass.swift in Sources */,
 				FA89C48C25EDA25B00E29777 /* AppDelegate.swift in Sources */,
 				FA89C4B125EDA41700E29777 /* WestCoastTableViewController.swift in Sources */,
+				FA3419FD25F58C7000135BCE /* User+CoreDataClass.swift in Sources */,
 				FA89C48E25EDA25B00E29777 /* SceneDelegate.swift in Sources */,
+				FA3419FB25F58C7000135BCE /* Courses+CoreDataClass.swift in Sources */,
 				FA89C49625EDA25B00E29777 /* WestCoastApp.xcdatamodeld in Sources */,
 				FA89C4CA25EDB00400E29777 /* CoursesBrain.swift in Sources */,
-				FA89C4D425EDB69A00E29777 /* User+CoreDataProperties.swift in Sources */,
 				FA89C4D925EDBB0C00E29777 /* UserBrain.swift in Sources */,
 				FA89C4C425EDADA900E29777 /* CourseListTableViewController.swift in Sources */,
+				FA3419FE25F58C7000135BCE /* User+CoreDataProperties.swift in Sources */,
 				FAB3553C25EFE92C00A93528 /* TextFieldTableViewCell.swift in Sources */,
 				FA89C4CD25EDB17900E29777 /* CoursesModel.swift in Sources */,
 				FA89C4C725EDADB800E29777 /* ShowCourseTableViewController.swift in Sources */,

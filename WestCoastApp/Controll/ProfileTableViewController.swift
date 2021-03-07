@@ -15,6 +15,8 @@ class ProfileTableViewController: UITableViewController {
     //    var courses = ["HTML", "Swift", "Android"]
     
     var courses = [Courses]()
+    var coursesClass = [Courses]()
+    var coursesWish = [Courses]()
     var newUser = [User]()
     
     
@@ -30,14 +32,25 @@ class ProfileTableViewController: UITableViewController {
         
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(true)
+//    override func viewDidAppear(_ animated: Bool) {
+//        super.viewDidAppear(true)
+//
+//        courses = newUser[0].user_Course_List?.allObjects as! [Courses]
+//        coursesClass = newUser[0].user_Class_List?.allObjects as! [Courses]
+//        coursesWish = newUser[0].user_Wish_List?.allObjects as! [Courses]
+//
+//        loadUser()
+//    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
         
         courses = newUser[0].user_Course_List?.allObjects as! [Courses]
+        coursesClass = newUser[0].user_Class_List?.allObjects as! [Courses]
+        coursesWish = newUser[0].user_Wish_List?.allObjects as! [Courses]
        
         loadUser()
     }
-    
     
     
     
@@ -45,13 +58,17 @@ class ProfileTableViewController: UITableViewController {
     
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 4
+        return 6
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         if section == 1 {
             return courses.count
+        }else if section == 2 {
+            return coursesClass.count
+        }else if section == 3 {
+            return coursesWish.count
         }else {
             return 1
         }
@@ -72,13 +89,27 @@ class ProfileTableViewController: UITableViewController {
             cell.textLabel?.textColor = UIColor(named: "WestTextColor")
             cell.textLabel?.font = UIFont.boldSystemFont(ofSize: 22.0)
         }else if indexPath.section == 1{
-            cell.textLabel?.text = courses[indexPath.row].course_Name ?? "No Course Added"
+            cell.textLabel?.text = courses[indexPath.row].course_Name
             cell.textLabel?.textAlignment = .left
             cell.textLabel?.font = UIFont.boldSystemFont(ofSize: 18.0)
             cell.textLabel?.textColor = UIColor(named: "WestTextColor")
             cell.backgroundColor = UIColor(named: "WestBackGroundColor")
             
-        }else if indexPath.section == 2 {
+        }else if indexPath.section == 2{
+            cell.textLabel?.text = coursesClass[indexPath.row].course_Name ?? "n"
+            cell.textLabel?.textAlignment = .left
+            cell.textLabel?.font = UIFont.boldSystemFont(ofSize: 18.0)
+            cell.textLabel?.textColor = UIColor(named: "WestTextColor")
+            cell.backgroundColor = UIColor(named: "WestBackGroundColor")
+            
+        }else if indexPath.section == 3{
+            cell.textLabel?.text = coursesWish[indexPath.row].course_Name ?? "n"
+            cell.textLabel?.textAlignment = .left
+            cell.textLabel?.font = UIFont.boldSystemFont(ofSize: 18.0)
+            cell.textLabel?.textColor = UIColor(named: "WestTextColor")
+            cell.backgroundColor = UIColor(named: "WestBackGroundColor")
+            
+        }else if indexPath.section == 4 {
             cell.textLabel?.text = "Add New Course"
             cell.textLabel?.textAlignment = .center
             cell.textLabel?.font = UIFont.boldSystemFont(ofSize: 18.0)
@@ -98,9 +129,9 @@ class ProfileTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        if indexPath.section == 2{
+        if indexPath.section == 4{
             performSegue(withIdentifier: "CourseListSegue", sender: self)
-        }else if indexPath.section == 3{
+        }else if indexPath.section == 5{
             performSegue(withIdentifier: "logoutSegue", sender: self)
         }
     }
@@ -117,7 +148,11 @@ class ProfileTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         if section == 1 {
-            return "Your Courses"
+            return "Your Online Courses"
+        }else if section == 2 {
+            return "Your Class Courses"
+        }else if section == 3 {
+            return "Your Wish Courses"
         }else{
             return nil
         }
@@ -130,10 +165,28 @@ class ProfileTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         
-        context.delete(courses[indexPath.row])
-        courses.remove(at: indexPath.row )
-        saveToCoreData()
-        tableView.reloadData()
+        if indexPath.section == 1 {
+            context.delete(courses[indexPath.row])
+            courses.remove(at: indexPath.row )
+            saveToCoreData()
+            tableView.reloadData()
+           
+        }else if indexPath.section == 2 {
+            context.delete(coursesClass[indexPath.row])
+            coursesClass.remove(at: indexPath.row )
+            saveToCoreData()
+            tableView.reloadData()
+            
+        }else if indexPath.section == 3 {
+            context.delete(coursesWish[indexPath.row])
+            coursesWish.remove(at: indexPath.row )
+            saveToCoreData()
+            tableView.reloadData()
+            
+        
+        }
+        
+        
     }
     
     

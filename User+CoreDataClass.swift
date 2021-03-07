@@ -2,7 +2,7 @@
 //  User+CoreDataClass.swift
 //  WestCoastApp
 //
-//  Created by Atlal Basha on 2021-03-02.
+//  Created by Atlal Basha on 2021-03-07.
 //
 //
 

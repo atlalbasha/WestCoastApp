@@ -2,7 +2,7 @@
 //  Courses+CoreDataProperties.swift
 //  WestCoastApp
 //
-//  Created by Atlal Basha on 2021-03-02.
+//  Created by Atlal Basha on 2021-03-07.
 //
 //
 
@@ -16,9 +16,12 @@ extension Courses {
         return NSFetchRequest<Courses>(entityName: "Courses")
     }
 
-    @NSManaged public var course_Name: String?
     @NSManaged public var course_Description: String?
+    @NSManaged public var course_Name: String?
+    @NSManaged public var course_Start_End: String?
+    @NSManaged public var class_List: User?
     @NSManaged public var course_List: User?
+    @NSManaged public var wish_List: User?
 
 }
 

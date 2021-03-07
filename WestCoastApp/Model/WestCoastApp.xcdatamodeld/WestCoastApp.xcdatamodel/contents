@@ -1,19 +1,24 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="17709" systemVersion="20D74" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="17709" systemVersion="20D80" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Courses" representedClassName="Courses" syncable="YES">
         <attribute name="course_Description" optional="YES" attributeType="String"/>
         <attribute name="course_Name" optional="YES" attributeType="String"/>
+        <attribute name="course_Start_End" optional="YES" attributeType="String"/>
+        <relationship name="class_List" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="user_Class_List" inverseEntity="User"/>
         <relationship name="course_List" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="user_Course_List" inverseEntity="User"/>
+        <relationship name="wish_List" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="user_Wish_List" inverseEntity="User"/>
     </entity>
     <entity name="User" representedClassName="User" syncable="YES">
         <attribute name="user_Email" optional="YES" attributeType="String"/>
         <attribute name="user_Mobile" optional="YES" attributeType="String"/>
         <attribute name="user_Name" optional="YES" attributeType="String"/>
         <attribute name="user_Password" optional="YES" attributeType="String"/>
+        <relationship name="user_Class_List" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Courses" inverseName="class_List" inverseEntity="Courses"/>
         <relationship name="user_Course_List" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Courses" inverseName="course_List" inverseEntity="Courses"/>
+        <relationship name="user_Wish_List" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Courses" inverseName="wish_List" inverseEntity="Courses"/>
     </entity>
     <elements>
-        <element name="User" positionX="-830.1343994140625" positionY="-789.9172058105469" width="128" height="118"/>
-        <element name="Courses" positionX="-559.2659301757812" positionY="-685.3540649414062" width="128" height="88"/>
+        <element name="Courses" positionX="-442.6590576171875" positionY="-281.4780883789062" width="128" height="133"/>
+        <element name="User" positionX="-861.33935546875" positionY="-296.5975036621094" width="128" height="148"/>
     </elements>
 </model>
