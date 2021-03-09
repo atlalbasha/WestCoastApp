@@ -43,6 +43,11 @@ class WestCoastTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         
        
+        // prepare cell to reuse
+        cell.textLabel?.text = nil
+        cell.imageView?.image = nil
+        cell.textLabel?.textColor = nil
+        cell.textLabel?.font = nil
 
         // Configure the cell...
         if indexPath.section == 0 {
@@ -53,11 +58,15 @@ class WestCoastTableViewController: UITableViewController {
             cell.selectionStyle = .none
         }else if indexPath.section == 1 {
             cell.textLabel?.text = "WestCoast Education"
+            cell.backgroundColor = .systemBackground
             cell.textLabel?.textAlignment = .center
             cell.selectionStyle = .none
             cell.textLabel?.textColor = UIColor(named: "WestTextColor")
             cell.textLabel?.font = UIFont.boldSystemFont(ofSize: 22.0)
         }else if indexPath.section == 2 {
+            
+            cell.backgroundColor = .systemBackground
+            cell.selectionStyle = .none
             
         }else if indexPath.section == 3 {
             cell.textLabel?.text = "Login"

@@ -117,6 +117,8 @@ class LoginTableViewController: UITableViewController, UITextFieldDelegate {
             loadUser(userName: userBrain.userName, userPassword: userBrain.userPassword)
             if (currentUser != nil) {
                 performSegue(withIdentifier: "ProfileSegue", sender: self)
+            }else{
+                alert()
             }
            
         }
@@ -149,6 +151,7 @@ class LoginTableViewController: UITableViewController, UITextFieldDelegate {
             }
             
         }else{
+           // do if textfield is empty
             
         }
         
@@ -170,6 +173,19 @@ class LoginTableViewController: UITableViewController, UITextFieldDelegate {
         }catch{
             print("Error")
         }
+        
+    }
+    
+    
+    func alert() {
+        
+        
+        let alert = UIAlertController(title: "Warning", message: "User name, or Password don't Match", preferredStyle: .alert)
+                
+         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+         alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+                
+        present(alert, animated: true, completion: nil)
         
     }
 }

@@ -14,7 +14,7 @@ class ShowCourseTableViewController: UITableViewController {
     
     var currentUser : User? {
         didSet{
-            print(currentUser)
+            print(currentUser!)
         }
         
     }
@@ -73,6 +73,7 @@ class ShowCourseTableViewController: UITableViewController {
         }else if indexPath.section == 2 {
             cell.textLabel?.text = "Apply Online Course"
             cell.imageView?.image = UIImage(systemName: "tv")
+            cell.imageView?.tintColor = .white
             //            cell.textLabel?.textAlignment = .center
             cell.textLabel?.font = UIFont.boldSystemFont(ofSize: 18.0)
             cell.textLabel?.textColor = UIColor(named: "WestTextColor")
@@ -81,7 +82,8 @@ class ShowCourseTableViewController: UITableViewController {
         }else if indexPath.section == 3 {
             cell.textLabel?.text = "Apply School Course"
             cell.imageView?.image = UIImage(systemName: "graduationcap")
-            //            cell.textLabel?.textAlignment = .center
+            cell.imageView?.tintColor = .white
+//            cell.textLabel?.textAlignment = .center
             cell.textLabel?.font = UIFont.boldSystemFont(ofSize: 18.0)
             cell.textLabel?.textColor = UIColor(named: "WestTextColor")
             cell.backgroundColor = UIColor(named: "WestBackGroundColor")
@@ -89,6 +91,7 @@ class ShowCourseTableViewController: UITableViewController {
         }else if indexPath.section == 4 {
             cell.textLabel?.text = "Wish Course"
             cell.imageView?.image = UIImage(systemName: "heart")
+            cell.imageView?.tintColor = .white
             //            cell.textLabel?.textAlignment = .center
             cell.textLabel?.font = UIFont.boldSystemFont(ofSize: 18.0)
             cell.textLabel?.textColor = UIColor(named: "WestTextColor")
@@ -129,6 +132,14 @@ class ShowCourseTableViewController: UITableViewController {
         }
     }
     
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        if section == 1 {
+            return selectedCourse.courseStartEnd
+        }else{
+            return nil
+        }
+    }
+    
     
     
     func saveNewCourse() {
@@ -136,6 +147,7 @@ class ShowCourseTableViewController: UITableViewController {
         let newCourse = Courses(context: context)
         newCourse.course_Name = selectedCourse.courseName
         newCourse.course_Description = selectedCourse.courseDescribe
+        newCourse.course_Start_End = selectedCourse.courseStartEnd
         //        newCourse.course_List = currentUser
         currentUser?.addToUser_Course_List(newCourse)
       
@@ -145,6 +157,7 @@ class ShowCourseTableViewController: UITableViewController {
         let newCourse = Courses(context: context)
         newCourse.course_Name = selectedCourse.courseName
         newCourse.course_Description = selectedCourse.courseDescribe
+        newCourse.course_Start_End = selectedCourse.courseStartEnd
         //        newCourse.course_List = currentUser
         currentUser?.addToUser_Class_List(newCourse)
       
@@ -154,6 +167,7 @@ class ShowCourseTableViewController: UITableViewController {
         let newCourse = Courses(context: context)
         newCourse.course_Name = selectedCourse.courseName
         newCourse.course_Description = selectedCourse.courseDescribe
+        newCourse.course_Start_End = selectedCourse.courseStartEnd
         //        newCourse.course_List = currentUser
         currentUser?.addToUser_Wish_List(newCourse)
       

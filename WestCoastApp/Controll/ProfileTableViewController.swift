@@ -32,15 +32,15 @@ class ProfileTableViewController: UITableViewController {
         
     }
     
-//    override func viewDidAppear(_ animated: Bool) {
-//        super.viewDidAppear(true)
-//
-//        courses = newUser[0].user_Course_List?.allObjects as! [Courses]
-//        coursesClass = newUser[0].user_Class_List?.allObjects as! [Courses]
-//        coursesWish = newUser[0].user_Wish_List?.allObjects as! [Courses]
-//
-//        loadUser()
-//    }
+    //    override func viewDidAppear(_ animated: Bool) {
+    //        super.viewDidAppear(true)
+    //
+    //        courses = newUser[0].user_Course_List?.allObjects as! [Courses]
+    //        coursesClass = newUser[0].user_Class_List?.allObjects as! [Courses]
+    //        coursesWish = newUser[0].user_Wish_List?.allObjects as! [Courses]
+    //
+    //        loadUser()
+    //    }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
@@ -48,7 +48,7 @@ class ProfileTableViewController: UITableViewController {
         courses = newUser[0].user_Course_List?.allObjects as! [Courses]
         coursesClass = newUser[0].user_Class_List?.allObjects as! [Courses]
         coursesWish = newUser[0].user_Wish_List?.allObjects as! [Courses]
-       
+        
         loadUser()
     }
     
@@ -82,6 +82,7 @@ class ProfileTableViewController: UITableViewController {
         // Configure the cell...
         
         if indexPath.section == 0 {
+            
             cell.textLabel?.text = currentUser?.user_Name
             cell.textLabel?.textAlignment = .left
             cell.imageView?.image = UIImage(systemName: "person")
@@ -89,11 +90,13 @@ class ProfileTableViewController: UITableViewController {
             cell.textLabel?.textColor = UIColor(named: "WestTextColor")
             cell.textLabel?.font = UIFont.boldSystemFont(ofSize: 22.0)
         }else if indexPath.section == 1{
-            cell.textLabel?.text = courses[indexPath.row].course_Name
+            cell.textLabel?.text = "\(courses[indexPath.row].course_Name!)\n\(courses[indexPath.row].course_Start_End!)"
+            
             cell.textLabel?.textAlignment = .left
             cell.textLabel?.font = UIFont.boldSystemFont(ofSize: 18.0)
             cell.textLabel?.textColor = UIColor(named: "WestTextColor")
             cell.backgroundColor = UIColor(named: "WestBackGroundColor")
+            cell.textLabel?.numberOfLines = 0
             
         }else if indexPath.section == 2{
             cell.textLabel?.text = coursesClass[indexPath.row].course_Name ?? "n"
@@ -110,12 +113,14 @@ class ProfileTableViewController: UITableViewController {
             cell.backgroundColor = UIColor(named: "WestBackGroundColor")
             
         }else if indexPath.section == 4 {
+            cell.detailTextLabel?.isHidden = true
             cell.textLabel?.text = "Add New Course"
             cell.textLabel?.textAlignment = .center
             cell.textLabel?.font = UIFont.boldSystemFont(ofSize: 18.0)
             cell.textLabel?.textColor = UIColor(named: "WestTextColor")
             cell.backgroundColor = UIColor(named: "WestBackGroundColor")
         }else {
+            cell.detailTextLabel?.isHidden = true
             cell.textLabel?.text = "Logout"
             cell.textLabel?.textAlignment = .center
             cell.textLabel?.font = UIFont.boldSystemFont(ofSize: 18.0)
@@ -139,10 +144,10 @@ class ProfileTableViewController: UITableViewController {
         if segue.identifier == "CourseListSegue"{
             let VC = segue.destination as! CourseListTableViewController
             VC.currentUser = currentUser
-        
+            
         }else if segue.identifier == "logoutSegue" {
             
-            let VC = segue.destination as! WestCoastTableViewController
+            _ = segue.destination as! WestCoastTableViewController
         }
     }
     
@@ -169,29 +174,29 @@ class ProfileTableViewController: UITableViewController {
             context.delete(courses[indexPath.row])
             courses.remove(at: indexPath.row )
             saveToCoreData()
-            tableView.reloadData()
-           
+            
+            
         }else if indexPath.section == 2 {
             context.delete(coursesClass[indexPath.row])
             coursesClass.remove(at: indexPath.row )
             saveToCoreData()
-            tableView.reloadData()
+            
             
         }else if indexPath.section == 3 {
             context.delete(coursesWish[indexPath.row])
             coursesWish.remove(at: indexPath.row )
             saveToCoreData()
-            tableView.reloadData()
             
-        
+            
+            
         }
         
-        
+        tableView.reloadData()
     }
     
     
     
-    
+    // get user with match name and password. so there is no way to get more or wrong user.
     func loadUser(){
         let request: NSFetchRequest<User> = User.fetchRequest()
         let predicate = NSPredicate(format: "user_Name == %@ && user_Password == %@", currentUser!.user_Name!, currentUser!.user_Password!)

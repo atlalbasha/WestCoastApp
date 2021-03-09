@@ -124,9 +124,9 @@ class CourseListTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         if section == 1 {
-            return "Web development"
+            return "Web Development"
         }else if section == 2{
-            return "Programming mobile devices"
+            return "Programming Mobile Devices"
         }else if section == 3{
             return "Backend Programming"
         }else if section == 4{
