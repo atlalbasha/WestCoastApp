@@ -82,7 +82,7 @@ class ProfileTableViewController: UITableViewController {
         // Configure the cell...
         
         if indexPath.section == 0 {
-            
+            cell.backgroundColor = .systemBackground
             cell.textLabel?.text = currentUser?.user_Name
             cell.textLabel?.textAlignment = .left
             cell.imageView?.image = UIImage(systemName: "person")
