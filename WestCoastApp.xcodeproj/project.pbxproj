@@ -23,9 +23,9 @@
 		FA89C4BA25EDA45500E29777 /* ProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA89C4B925EDA45500E29777 /* ProfileTableViewController.swift */; };
 		FA89C4C425EDADA900E29777 /* CourseListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA89C4C325EDADA900E29777 /* CourseListTableViewController.swift */; };
 		FA89C4C725EDADB800E29777 /* ShowCourseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA89C4C625EDADB800E29777 /* ShowCourseTableViewController.swift */; };
-		FA89C4CA25EDB00400E29777 /* CoursesBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA89C4C925EDB00400E29777 /* CoursesBrain.swift */; };
-		FA89C4CD25EDB17900E29777 /* CoursesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA89C4CC25EDB17900E29777 /* CoursesModel.swift */; };
-		FA89C4D925EDBB0C00E29777 /* UserBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA89C4D825EDBB0C00E29777 /* UserBrain.swift */; };
+		FAA18B63260CEBB000C23970 /* CoursesBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA18B62260CEBB000C23970 /* CoursesBrain.swift */; };
+		FAA18B67260CEBD900C23970 /* CoursesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA18B66260CEBD900C23970 /* CoursesModel.swift */; };
+		FAA18B6B260CEBEE00C23970 /* UserBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA18B6A260CEBED00C23970 /* UserBrain.swift */; };
 		FAB3553B25EFE92C00A93528 /* TextFieldTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAB3553925EFE92C00A93528 /* TextFieldTableViewCell.xib */; };
 		FAB3553C25EFE92C00A93528 /* TextFieldTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB3553A25EFE92C00A93528 /* TextFieldTableViewCell.swift */; };
 /* End PBXBuildFile section */
@@ -49,9 +49,9 @@
 		FA89C4B925EDA45500E29777 /* ProfileTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableViewController.swift; sourceTree = "<group>"; };
 		FA89C4C325EDADA900E29777 /* CourseListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseListTableViewController.swift; sourceTree = "<group>"; };
 		FA89C4C625EDADB800E29777 /* ShowCourseTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowCourseTableViewController.swift; sourceTree = "<group>"; };
-		FA89C4C925EDB00400E29777 /* CoursesBrain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CoursesBrain.swift; path = ../../../WestCoast/WestCoast/CoreDataModel/CoursesBrain.swift; sourceTree = "<group>"; };
-		FA89C4CC25EDB17900E29777 /* CoursesModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CoursesModel.swift; path = ../../../WestCoast/WestCoast/CoreDataModel/CoursesModel.swift; sourceTree = "<group>"; };
-		FA89C4D825EDBB0C00E29777 /* UserBrain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserBrain.swift; path = ../../../WestCoast/WestCoast/CoreDataModel/UserBrain.swift; sourceTree = "<group>"; };
+		FAA18B62260CEBB000C23970 /* CoursesBrain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoursesBrain.swift; sourceTree = "<group>"; };
+		FAA18B66260CEBD900C23970 /* CoursesModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoursesModel.swift; sourceTree = "<group>"; };
+		FAA18B6A260CEBED00C23970 /* UserBrain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserBrain.swift; sourceTree = "<group>"; };
 		FAB3553925EFE92C00A93528 /* TextFieldTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TextFieldTableViewCell.xib; sourceTree = "<group>"; };
 		FAB3553A25EFE92C00A93528 /* TextFieldTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -131,9 +131,9 @@
 				FA3419F925F58C7000135BCE /* User+CoreDataClass.swift */,
 				FA3419FA25F58C7000135BCE /* User+CoreDataProperties.swift */,
 				FA89C49425EDA25B00E29777 /* WestCoastApp.xcdatamodeld */,
-				FA89C4C925EDB00400E29777 /* CoursesBrain.swift */,
-				FA89C4CC25EDB17900E29777 /* CoursesModel.swift */,
-				FA89C4D825EDBB0C00E29777 /* UserBrain.swift */,
+				FAA18B62260CEBB000C23970 /* CoursesBrain.swift */,
+				FAA18B66260CEBD900C23970 /* CoursesModel.swift */,
+				FAA18B6A260CEBED00C23970 /* UserBrain.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -232,6 +232,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA89C4BA25EDA45500E29777 /* ProfileTableViewController.swift in Sources */,
+				FAA18B6B260CEBEE00C23970 /* UserBrain.swift in Sources */,
 				FA89C4B425EDA43700E29777 /* LoginTableViewController.swift in Sources */,
 				FA3419FC25F58C7000135BCE /* Courses+CoreDataProperties.swift in Sources */,
 				FA89C4B725EDA44700E29777 /* SignUpTableViewController.swift in Sources */,
@@ -241,12 +242,11 @@
 				FA89C48E25EDA25B00E29777 /* SceneDelegate.swift in Sources */,
 				FA3419FB25F58C7000135BCE /* Courses+CoreDataClass.swift in Sources */,
 				FA89C49625EDA25B00E29777 /* WestCoastApp.xcdatamodeld in Sources */,
-				FA89C4CA25EDB00400E29777 /* CoursesBrain.swift in Sources */,
-				FA89C4D925EDBB0C00E29777 /* UserBrain.swift in Sources */,
 				FA89C4C425EDADA900E29777 /* CourseListTableViewController.swift in Sources */,
 				FA3419FE25F58C7000135BCE /* User+CoreDataProperties.swift in Sources */,
 				FAB3553C25EFE92C00A93528 /* TextFieldTableViewCell.swift in Sources */,
-				FA89C4CD25EDB17900E29777 /* CoursesModel.swift in Sources */,
+				FAA18B63260CEBB000C23970 /* CoursesBrain.swift in Sources */,
+				FAA18B67260CEBD900C23970 /* CoursesModel.swift in Sources */,
 				FA89C4C725EDADB800E29777 /* ShowCourseTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
